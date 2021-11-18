@@ -1,0 +1,112 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<style>
+  body {
+    background-color: #3b3b98;
+    color: #fff;
+    font-family: "Muli", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 300 vh;
+    padding: 10px;
+    margin:0;
+
+  }
+
+  .main {
+ 
+  
+width:500px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    text-align: center;
+    color: rgb(233, 13, 13);
+    font-size: 22px;
+
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+
+  }
+
+  .background {
+    background-color: black;
+
+
+  }
+
+  .container-1 {
+    background-color: rgb(163, 238, 43);
+
+    padding-bottom: 20;
+
+
+
+  }
+
+  .container-2 {
+    background-color: rgb(78, 16, 248);
+    padding-bottom: 20;
+
+
+  }
+
+  .container-3 {
+    background-color: rgb(233, 192, 12);
+    padding-bottom: 20;
+
+
+  }
+</style>
+
+<body ng-app="">
+
+  <div class="main">
+    <div class="background" ng-init="">
+
+      <h2>BMI converter</h2>
+
+      <label>Height:</label><br>
+      <input ng-model="height">
+      <br>
+      <label>Weight:</label><br>
+      <input ng-model="weight">
+      <br>
+      <p ng-bind="weight/(height*height)">
+      </p>
+    </div>
+    <div class="container-1" ng-init=" lt=1;ctli=1000">
+
+
+
+      <h3>Litre To millilitre(Converter)</h3>
+      <input type="number" placeholder="Enter the liters" ng-model="lt"></br></br>
+      <p ng-bind="lt*ctli"></p>
+      <br>
+    </div>
+    <div class="container-2" ng-init="rs=74.24;do=1">
+
+      <h3>Dollar to Rupee converter</h3>
+      <input type="number" placeholder="enter the dollars" ng-model="do"></br></br>
+      <p>{{do*rs}} RS/-</p>
+
+      <br>
+    </div>
+    <div class="container-3" ng-init=" kg=1 ;ou=35.2739619">
+      <h3>kilograms to ounce converter</h3>
+      <input type="number" placeholder="Enter Your Number" ng-model="kg"></br></br>
+      <p ng-bind="kg*ou"></p>
+    </div>
+  </div>
+</body>
+
+</html>
